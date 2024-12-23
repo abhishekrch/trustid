@@ -1,0 +1,711 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "username",
+        "type": "string"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "firstName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lastName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "username",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "homeAddress",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "dateOfBirth",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "phoneNumber",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.BasicInfo",
+        "name": "basicInfo",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "education",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "workHistory",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "jobTitle",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "info",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "skills",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string",
+            "name": "imageURL",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.ProfessionalInfo",
+        "name": "professionalInfo",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "x",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "instagram",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "youtube",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "linkedin",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.SocialLinks",
+        "name": "socialLinks",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "education",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "workHistory",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "phoneNumber",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "homeAddress",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "dateOfBirth",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct TrustID.Visibility",
+        "name": "visibility",
+        "type": "tuple"
+      }
+    ],
+    "name": "createUser",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "username",
+        "type": "string"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "firstName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lastName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "username",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "homeAddress",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "dateOfBirth",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "phoneNumber",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.BasicInfo",
+        "name": "basicInfo",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "education",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "workHistory",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "jobTitle",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "info",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "skills",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string",
+            "name": "imageURL",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.ProfessionalInfo",
+        "name": "professionalInfo",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "x",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "instagram",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "youtube",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "linkedin",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.SocialLinks",
+        "name": "socialLinks",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "education",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "workHistory",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "phoneNumber",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "homeAddress",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "dateOfBirth",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct TrustID.Visibility",
+        "name": "visibility",
+        "type": "tuple"
+      }
+    ],
+    "name": "editUser",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "userAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getUserByAddress",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "firstName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lastName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "username",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "homeAddress",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "dateOfBirth",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "phoneNumber",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.BasicInfo",
+        "name": "basicInfo",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "education",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "workHistory",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "jobTitle",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "info",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "skills",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string",
+            "name": "imageURL",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.ProfessionalInfo",
+        "name": "professionalInfo",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "x",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "instagram",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "youtube",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "linkedin",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.SocialLinks",
+        "name": "socialLinks",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "education",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "workHistory",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "phoneNumber",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "homeAddress",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "dateOfBirth",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct TrustID.Visibility",
+        "name": "visibility",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "username",
+        "type": "string"
+      }
+    ],
+    "name": "getUserByUsername",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "firstName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lastName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "username",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "email",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "homeAddress",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "dateOfBirth",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "phoneNumber",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.BasicInfo",
+        "name": "basicInfo",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "education",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "workHistory",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "jobTitle",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "info",
+            "type": "string"
+          },
+          {
+            "internalType": "string[]",
+            "name": "skills",
+            "type": "string[]"
+          },
+          {
+            "internalType": "string",
+            "name": "imageURL",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.ProfessionalInfo",
+        "name": "professionalInfo",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "x",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "instagram",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "youtube",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "linkedin",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct TrustID.SocialLinks",
+        "name": "socialLinks",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "education",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "workHistory",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "phoneNumber",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "homeAddress",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "dateOfBirth",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct TrustID.Visibility",
+        "name": "visibility",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "userAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getUsernameByAddress",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "username",
+        "type": "string"
+      }
+    ],
+    "name": "getVisibility",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bool",
+            "name": "education",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "workHistory",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "phoneNumber",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "homeAddress",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "dateOfBirth",
+            "type": "bool"
+          }
+        ],
+        "internalType": "struct TrustID.Visibility",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "username",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "education",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "workHistory",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "phoneNumber",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "homeAddress",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "dateOfBirth",
+        "type": "bool"
+      }
+    ],
+    "name": "setVisibility",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
