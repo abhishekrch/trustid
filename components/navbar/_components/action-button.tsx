@@ -41,7 +41,7 @@ const ActionButtons = () => {
     <div className="pr-2">
       <div className=" items-center justify-center flex ">
         <div className="flex xl:space-x-4">
-          {authenticated && UserInfo !== "User does not exist." ? (
+          {authenticated && typeof UserInfo === 'object' ? (
             <>
               <Link
                 href={"/dashboard"}
@@ -54,7 +54,7 @@ const ActionButtons = () => {
                 |
               </div>
             </>
-          ) : authenticated && UserInfo =="User exist." ? (
+          ) : authenticated ? (
             <>
               <Link href={"/onboard"} className="lg:flex items-center hidden">
              <div className="">Get TrustID</div>
