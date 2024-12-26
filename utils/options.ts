@@ -1,4 +1,3 @@
-// utils/options.ts
 export const options = [
     { value: "backend-development", label: "Backend Development" },
     { value: "frontend-development", label: "Frontend Development" },

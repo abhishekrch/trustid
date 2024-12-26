@@ -34,8 +34,8 @@ const ActionButtons = () => {
     getUserInfo();
   }, [ready, authenticated]);
 
-  console.log(UserInfo == "User does not exist.");
-  console.log(authenticated);
+  // console.log(UserInfo == "User does not exist.");
+  // console.log(authenticated);
 
   return (
     <div className="pr-2">

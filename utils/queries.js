@@ -25,19 +25,55 @@ export async function createUser(
 ) {
   try {
     const contractObj = await contract();
+      const sanitizedBasicInfo = {
+      firstName: basicInfo.firstName || "",
+      lastName: basicInfo.lastName || "",
+      username: username || "",
+      email: basicInfo.email || "",
+      homeAddress: basicInfo.homeAddress || "",
+      dateOfBirth: basicInfo.dateOfBirth || "",
+      phoneNumber: basicInfo.phoneNumber || ""
+    };
+
+    const sanitizedProfessionalInfo = {
+      education: professionalInfo.education || "",
+      workHistory: professionalInfo.workHistory || "",
+      jobTitle: professionalInfo.jobTitle || "",
+      info: professionalInfo.info || "",
+      skills: Array.isArray(professionalInfo.skills) ? professionalInfo.skills : [],
+      imageURL: professionalInfo.imageURL || ""
+    };
+
+    const sanitizedSocialLinks = {
+      x: socialLinks.x || "",
+      instagram: socialLinks.instagram || "",
+      youtube: socialLinks.youtube || "",
+      linkedin: socialLinks.linkedin || ""
+    };
+
+    const sanitizedVisibility = {
+      education: Boolean(visibility.education),
+      workHistory: Boolean(visibility.workHistory),
+      phoneNumber: Boolean(visibility.phoneNumber),
+      homeAddress: Boolean(visibility.homeAddress),
+      dateOfBirth: Boolean(visibility.dateOfBirth)
+    };
+
+    await window.ethereum.request({ method: 'eth_requestAccounts' });
+
     const transactionResponse = await contractObj.createUser(
       username,
-      basicInfo,
-      professionalInfo,
-      socialLinks,
-      visibility
+      sanitizedBasicInfo,
+      sanitizedProfessionalInfo,
+      sanitizedSocialLinks,
+      sanitizedVisibility
     );
 
-    const recipet = await transactionResponse.wait();
-    return recipet;
+    const receipt = await transactionResponse.wait();
+    return receipt;
   } catch (error) {
-    console.log(error);
-    return parseErrorMsg(error);
+    console.error("Create user error:", error);
+    throw error;
   }
 }
 
@@ -143,7 +179,7 @@ export async function getUserByAddress(userAddress) {
       },
     };
   } catch (error) {
-    console.error(error);
+    console.error("Error in getUserByAddress", error);
     return parseErrorMsg(error);
   }
 }

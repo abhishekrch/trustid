@@ -206,60 +206,64 @@ export default function CreateProfile() {
       setLoading(true);
       try {
         const basicInfo = {
-          firstName: formData.first_name,
-          lastName: formData.last_name,
-          email: formData.email,
-          homeAddress: formData.home_address,
-          dateOfBirth: formData.date_of_birth,
-          phoneNumber: formData.phone_number,
+          firstName: formData.first_name || "",
+          lastName: formData.last_name || "",
+          username: formData.username || "",
+          email: formData.email || "",
+          homeAddress: formData.home_address || "",
+          dateOfBirth: formData.date_of_birth || "",
+          phoneNumber: formData.phone_number || ""
         };
-  
+
         const professionalInfo = {
-          education: formData.education,
-          workHistory: formData.work_history,
-          jobTitle: formData.job_title,
-          info: formData.info,
-          skills: formData.skills,
-          imageURL: formData.imageUrl,
+          education: formData.education || "",
+          workHistory: formData.work_history || "",
+          jobTitle: formData.job_title || "",
+          info: formData.info || "",
+          skills: Array.isArray(formData.skills) ? formData.skills : [],
+          imageURL: formData.imageUrl || ""
         };
-  
+
         const socialLinks = {
           x: formData.x || "",
           instagram: formData.instagram || "",
           youtube: formData.youtube || "",
-          linkedin: formData.linkedin || "",
+          linkedin: formData.linkedin || ""
         };
-  
+
         const visibility = {
           education: true,
           workHistory: true,
           phoneNumber: true,
           homeAddress: true,
-          dateOfBirth: true,
+          dateOfBirth: true
         };
-  
-        if (
-          !formData.username ||
-          !basicInfo.firstName ||
-          !basicInfo.lastName ||
-          !basicInfo.email
-        ) {
+
+        if (!formData.username || !basicInfo.firstName || !basicInfo.lastName || !basicInfo.email) {
           throw new Error("Required fields are missing.");
         }
-  
-        const receipt = await createUser(
-          formData.username,
-          basicInfo,
-          professionalInfo,
-          socialLinks,
-          visibility
-        );
-        console.log("User created:", receipt);
-        toast({
-          title: "",
-          description: "User created successfully",
-        });
-        setSubmitted(true);
+
+        try {
+          const receipt = await createUser(
+            formData.username,
+            basicInfo,
+            professionalInfo,
+            socialLinks,
+            visibility
+          );
+          
+          if (receipt) {
+            console.log("User created:", receipt);
+            toast({
+              title: "Success",
+              description: "User created successfully",
+            });
+            setSubmitted(true);
+          }
+        } catch (error: any) {
+          console.error("Contract error:", error);
+          throw new Error(error.message || "Contract interaction failed");
+        }
       } catch (error: any) {
         toast({
           title: "Error",
@@ -269,7 +273,7 @@ export default function CreateProfile() {
         setLoading(false);
       }
     };
-  
+       
     return (
       <div
         className="flex flex-col md:flex-row items-center md:items-start justify-between 
