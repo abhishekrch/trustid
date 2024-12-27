@@ -58,7 +58,7 @@ const UserProfileDisplay: React.FC<UserProfileDisplayProps> = ({
           <div className="flex flex-row items-center bg-gray-100 mt-2 space-x-2 px-3 py-2 rounded-lg">
             <IconPhone width={17} height={17} />
             <p className="text-sm">
-              {formData.phone_number || "+00 123 456 789"}
+              {formData.phone_number || "+91 123 456 7890"}
             </p>
           </div>
         </div>
@@ -70,7 +70,7 @@ const UserProfileDisplay: React.FC<UserProfileDisplayProps> = ({
           </span>
         </div>
         <div className="grid grid-cols-2 gap-2 w-full">
-          {formData.skills.map((skill: string, index: number) => (
+          {(formData.skills || []).map((skill: string, index: number) => (
             <div
               key={index}
               className="flex flex-row items-center bg-gray-100 w-max 

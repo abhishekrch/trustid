@@ -8,7 +8,7 @@ function parseErrorMsg(e) {
 export async function getUsernameByAddress(userAddress) {
   try {
     const contractObj = await contract();
-    const username = await contractObj.getUsernameByAddress[userAddress];
+    const username = await contractObj.getUsernameByAddress(userAddress);
     return username;
   } catch (error) {
     console.log(error);
